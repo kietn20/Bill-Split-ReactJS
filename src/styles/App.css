@@ -43,7 +43,7 @@ input {
 
 /* --------------------------------------------------------------------------- */
 .wrapper {
-	height: 100vh;
+	/* height: 100vh; */
 	padding: 50px;
 	/* border: red solid 2px; */
 	display: flex;
@@ -54,9 +54,12 @@ input {
 	background-image: url("../../../src/assets/receipt_template3.png");
 	background-size: cover;
 	background-repeat: no-repeat;
-	border: blue 1px solid;
-	padding-top: 100px;
+	/* border: blue 1px solid; */
+	padding-top: 90px;
 	position: relative;
+	overflow-y: auto;
+	height: 864px;
+	width: 422px;
 }
 
 .title {
@@ -65,7 +68,7 @@ input {
 }
 
 .title_form {
-	padding: 20px;
+	/* padding: 20px; */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -75,23 +78,22 @@ input {
 	color: black;
 }
 
-
 .title_input {
 	font-size: 190%;
 	text-align: center;
-	margin: 2px;
+	/* margin: 2px; */
 }
 
 .info {
-	border: 1px dashed darkgreen;
 	display: flex;
 	justify-content: space-between;
 	margin: 0px 20px 0px 20px;
-	font-size: 20px;
+	font-size: 16px;
+	/* border: 1px red dashed; */
 }
 
 .info input {
-	font-size: 20px;
+	font-size: 16px;
 	margin-top: 5px;
 }
 
@@ -100,7 +102,7 @@ input {
 }
 
 .info_left input {
-	font-size: 20px;
+	font-size: 16px;
 }
 
 .info_right {
@@ -117,7 +119,7 @@ input {
 }
 
 .orders {
-	border: 1px crimson dashed;
+	/* border: 1px crimson dashed; */
 	margin: 0px 20px 0px 20px;
 	display: flex;
 	flex-direction: column;
@@ -130,14 +132,20 @@ input {
 	justify-content: space-between;
 }
 
-.orders input, .order input::placeholder{
-	font-size: 18px;
+.orders input,
+.order input::placeholder {
+	font-size: 16px;
 	margin-bottom: 3px;
 	color: black;
 }
 
+.add-order {
+	font-weight: bold;
+	font-size: 15px;
+}
+
 .summary {
-	border: 1px rgb(106, 0, 255) dashed;
+	/* border: 1px rgb(106, 0, 255) dashed; */
 	margin: 0px 20px 0px 20px;
 	display: flex;
 	flex-direction: column;
@@ -151,7 +159,8 @@ input {
 	margin-bottom: 3px;
 }
 
-.summary input, .summary input::placeholder {
+.summary input,
+.summary input::placeholder {
 	font-size: 18px;
 	color: black;
 }
@@ -166,10 +175,12 @@ input {
 
 .right-side {
 	width: 700px;
-	background-color: #7D9B69;
+	height: 90vh;
+	background-color: #7d9b69;
 	border-radius: 30px;
 	text-align: center;
 	padding: 0px 40px 0px 40px;
+	position: relative;
 }
 
 .calculation-option {
@@ -178,14 +189,10 @@ input {
 	margin-bottom: 0px;
 	position: relative;
 	border-radius: 30px;
-	background-color: #8FB3AB;
+	border: #51746c 2px solid;
+	background-color: #8fb3ab;
 	display: flex;
 	justify-content: space-around;
-}
-
-.btn-add {
-	width: 300px;
-	border-radius: 20px 20px 30px 30px;
 }
 
 .toggle-btn {
@@ -204,9 +211,9 @@ input {
 	position: absolute;
 	width: 250px;
 	height: 100%;
-	background: #EEF4F0;
+	background: #eef4f0;
 	border-radius: 30px;
-	transition: .5s;
+	transition: 0.5s;
 }
 
 .party {
@@ -219,7 +226,7 @@ input {
 }
 
 .person {
-	background-color: #AAC5B6;
+	background-color: #aac5b6;
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
@@ -227,10 +234,12 @@ input {
 	padding: 20px;
 }
 
-.person input, .person input::placeholder {
+.person input,
+.person input::placeholder {
 	color: black;
 	text-align: center;
 	font-size: 18px;
+	background-color: #aac5b6;
 }
 
 .person-summary {
@@ -238,4 +247,12 @@ input {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+}
+
+.add-btn {
+	border: #51746c;
+	cursor: pointer;
+	align-items: center;
+	font-size: 30px;
+	font-weight: bold;
 }
