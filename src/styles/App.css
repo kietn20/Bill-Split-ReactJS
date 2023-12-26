@@ -54,7 +54,7 @@ input {
 }
 
 .left-side {
-	background-image: url("receipt_template3.png");
+	background-image: url("../assets/receipt_template3.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	/* border: blue 1px solid; */
