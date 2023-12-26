@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./styles/App.css";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
@@ -19,7 +19,7 @@ export default function App() {
 		total: 0,
 	});
 
-	const [mode, setMode] = useState("standard");
+	// const [mode, setMode] = useState("standard");
 
 	const [party, setParty] = useState([
 		{
@@ -98,11 +98,10 @@ export default function App() {
 				<div className="title">
 					<form className="title_form">
 						<input
-							placeholder="Red Castle Korean BBQ"
+							placeholder="BBQ Chicken"
 							type="text"
 							className="title_input input_center"
 						/>
-						<br />
 						<input
 							placeholder="8303 W"
 							type="text"
@@ -148,6 +147,7 @@ export default function App() {
 					<div className="info_right">
 						<form>
 							<input
+								disabled
 								className="input-large"
 								placeholder=""
 								type="text"
@@ -156,7 +156,7 @@ export default function App() {
 							<label htmlFor="">Guests:</label>
 							<input
 								className="input-small input-text-right"
-								placeholder="7"
+								placeholder={party.length}
 								type="text"
 							/>
 							<br />
@@ -208,7 +208,7 @@ export default function App() {
 							</div>
 						))}
 					</form>
-					{orders.length < 18 ? (
+					{orders.length < 14 ? (
 						<button
 							name="add-order"
 							className="add-order"
@@ -276,9 +276,9 @@ export default function App() {
 				<h3>
 					Went out with your friends and have a bill to split? Modify
 					the receipt and add your party to easily divide the costs.
-					^-^
+					^_^
 				</h3>
-				<div className="calculation-option">
+				{/* <div className="calculation-option">
 					<div id="btn"></div>
 					<button
 						onClick={() => {
@@ -298,7 +298,7 @@ export default function App() {
 					>
 						Customize
 					</button>
-				</div>
+				</div> */}
 
 				<div className="party">
 					{party.map((person, idx) => (
@@ -327,7 +327,7 @@ export default function App() {
 							</div>
 						</div>
 					))}
-					{party.length < 10  ? (
+					{party.length < 12 ? (
 						<button
 							name="add-party"
 							className="add-btn person"
