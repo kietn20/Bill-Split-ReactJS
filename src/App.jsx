@@ -304,7 +304,7 @@ export default function App() {
 					{party.map((person, idx) => (
 						<div className="person">
 							<img
-								src={`./cat${idx + 1}.png`}
+								src={`./assets/cat${idx + 1}.png`}
 								alt={`cat${idx + 1}`}
 								className="person-cat"
 							/>
